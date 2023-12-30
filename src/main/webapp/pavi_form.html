@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>CivilSoft</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./resources/images/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="./resources/css/normalize.css">
+        <link rel="stylesheet" href="./resources/css/estilos.css">
+        <script type="text/javascript" src="./resources/script/civilsoft.js"></script>
+    </head>
+    <body>
+        <header class="hero">
+        <nav class="nav container">
+            
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="index.html" class="nav__links">Inicio</a>
+                    
+                    
+                </li>
+                <li class="nav__items">
+                    <a href="" class="nav__links">Conócenos</a>
+                    
+                    <ul class="nav__nuevo">
+                        <li >
+                        <a href="why.html" class="nav__links">Por qué usar HS</a>
+                        <a href="clientes.html" class="nav__links">Clientes</a>
+                        </li>
+                    </ul>
+                    
+                    
+                    
+                </li>
+                <li class="nav__items">
+                    <a href="modulos.html" class="nav__links">Módulos</a>
+                    <ul class="nav__nuevo">
+                        <li >
+                        <a href="modulos.html" class="nav__links">Edificaciones</a>
+                        <a href="inframodulos.html" class="nav__links">Infraestructura</a>
+                        </li>
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="nav__items">
+                    <a href="modulos.html" class="nav__links">BIM</a>
+                    <ul class="nav__nuevo">
+                        <li >
+                        <a href="openproj.html" class="nav__links">Abrir </a>
+                        </li>
+                    </ul>
+                                        
+                </li>
+                
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Pedidos</a>
+                    
+                    
+                    <ul class="nav__nuevo">
+                        <li >
+                        <a href="solicitudes.html" class="nav__links">Solicitudes</a>
+                        </li>
+                    </ul>
+                    
+                </li>
+                <li class="nav__items">
+                    <a href="contacto.html" class="nav__links">Contactos</a>
+                </li>
+            </ul>
+                
+        </nav>
+
+        <section class="hero__container container">
+            <h1 class="hero__title">Solicitud de Cotizacion</h1>
+            <p class="hero__paragraph">Ingresa los datos de tu proyecto</p>
+            
+        </section>
+            
+    </header>
+        
+       <main>
+           
+        
+        <section class=" container_form about">
+            
+           
+                <div id="login">
+                    <img src="./resources/images/pavi.jpg" class="img_2" >
+                    
+                    <form id="loginform">
+                        <label >Nombre del proyecto *</label>
+                        <input type="text" name="nombreproj" placeholder="Nombre proyecto" required>
+                        <label >Ubicación *</label>
+                        <input type="text" name="ubicación" placeholder="Ubicación" required>
+                        <label >Tipo de pavimento *</label>
+                        <select name="puentes" id="puentes" required>
+                            <option value="vehicular">Flexible</option>
+                            <option value="peatonal">Rígido</option>
+                         </select>
+                         <label >Tipo de via *</label>
+                        <select name="vias" id="vias" required>
+                            <option value="vh1">Primaria</option>
+                             <option value="vh2">Secundaria</option>
+                             <option value="vh3">Terciaria</option>
+                            <option value="pet1">Peatonal</option>
+                         </select>
+                         <label >Longitud de diseño (m)</label>
+                        <input type="text" name="long" placeholder="Longitud" required>                         
+                        <label >Descripción de proyecto</label>
+                        <textarea rows="5" cols="34" id="aboutDescription" style="resize: none;"></textarea>
+                         <p>&nbsp;</p>
+                         <p>&nbsp;</p>
+                    
+                    
+                        <div class="table_subtitle">
+                       
+                           <h3 ><strong>Estudios que requieres</strong></h3>
+                        </div> 
+                        <fieldset class="checkboxgroup">
+                            <div class="checki">
+                            <input type="checkbox" id="top" name="top" value="Arq">
+                            <label > Topográfico</label><br>
+                            </div>
+                            <div class="checki">
+                            <input type="checkbox" id="geo" name="geo" value="Est">
+                            <label > Geotécnico</label><br>
+                            </div>
+                            <div class="checki">
+                            <input type="checkbox" id="hid" name="hid" value="Gas">
+                            <label > Hidrológico e hidráulico</label><br>
+                            </div>
+                            <div class="checki">
+                            <input type="checkbox" id="est" name="est" value="Elec">
+                            <label > Estructura</label><br>
+                            </div>
+                            <div class="checki">
+                            <input type="checkbox" id="trans" name="trans" value="Pci">
+                            <label > Estudio de transito</label><br>
+                            </div>
+                            
+                                                        
+                        </fieldset>
+                        
+                           <div class="checki">
+                              <label for="vehicle1"> Adjuntar archivos...</label><br>
+                              <a href="#" class="footer__icons"><img src="./resources/images/upload.png" class="footer__img"></a>
+                            </div>
+                         
+                        <button type="submit" title="Registrar" name="Registrar" onClick="cotizar()">Cotizar</button>
+                    </form>
+                    <div class="pie-form">
+                        <a href="inframodulos.html">Cancelar Cotización</a>
+                        <a href="index.html">Volver a Página Principal</a>
+                    </div>
+                </div>
+
+            
+            
+        </section>    
+       </main>
+        
+        <footer class="footer">
+       
+         <section class="footer__copy container">
+            <div class="footer__social">
+                <a href="#" class="footer__icons"><img src="./resources/images/facebook.svg" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="./resources/images/twitter.svg" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="./resources/images/youtube.svg" class="footer__img"></a>
+            </div>
+
+            <h3 class="footer__copyright">Derechos reservados &copy; Icaro SAS</h3>
+        </section>
+       </footer>
+
+
+
+    </body>
+</html>

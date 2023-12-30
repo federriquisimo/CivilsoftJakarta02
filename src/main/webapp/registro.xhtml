@@ -1,0 +1,164 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    <h:head>
+        <title>CivilSoft</title>
+        <meta charset="UTF-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+            <link rel="shortcut icon" href="./resources/images/favicon.png" type="image/x-icon"></link>
+        <link rel="stylesheet" href="./resources/css/normalize.css"></link>
+        <link rel="stylesheet" href="./resources/css/estilos.css"></link>
+        <script type="text/javascript" src="./resources/script/civilsoft.js"></script>
+    </h:head>
+    
+    <h:body>
+            <header class="hero">
+            <nav class="nav container">
+
+
+                <ul class="nav__link nav__link--menu">
+                    <li class="nav__items">
+                        <a href="index.html" class="nav__links">Inicio</a>
+
+
+                    </li>
+                    <li class="nav__items">
+                        <a href="" class="nav__links">Conócenos</a>
+
+                        <ul class="nav__nuevo">
+                            <li >
+                            <a href="why.html" class="nav__links">Por qué usar HS</a>
+                            <a href="clientes.html" class="nav__links">Clientes</a>
+                            </li>
+                        </ul>
+
+
+
+                    </li>
+                    <li class="nav__items">
+                        <a href="modulos.html" class="nav__links">Módulos</a>
+                        <ul class="nav__nuevo">
+                            <li >
+                            <a href="modulos.html" class="nav__links">Edificaciones</a>
+                            <a href="inframodulos.html" class="nav__links">Infraestructura</a>
+                            </li>
+                        </ul>
+
+
+                    </li>
+
+                    <li class="nav__items">
+                        <a href="modulos.html" class="nav__links">BIM</a>
+                        <ul class="nav__nuevo">
+                            <li >
+                            <a href="openproj.html" class="nav__links">Abrir </a>
+                            </li>
+                        </ul>
+
+                    </li>
+
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Pedidos</a>
+
+
+                        <ul class="nav__nuevo">
+                            <li >
+                            <a href="solicitudes.html" class="nav__links">Solicitudes</a>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li class="nav__items">
+                        <a href="contacto.html" class="nav__links">Contactos</a>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <section class="hero__container container">
+                <h1 class="hero__title">Registro</h1>
+                <p class="hero__paragraph">Ingresa tus datos</p>
+
+            </section>
+        </header>
+
+           <main>
+            <section class=" container_form about">
+
+
+                    <div id="login">
+                        <f:view>
+
+                            <h:form id="loginform">
+
+                                
+                                <h:outputText class= "output" value="Primer nombre"/>
+                                <h:inputText id="pnuser"  value="#{user.primerNombre}" required="true" requiredMessage="Pls enter the First Name"> </h:inputText>
+                                                                   
+                                <h:outputText class= "output" value="Segundo nombre"/>
+                                <h:inputText id="snuser"  value="#{user.segundoNombre}" required="false" requiredMessage="Pls enter the Second Name"> </h:inputText>   
+             
+                                <h:outputText class= "output" value="Primer apellido"/>
+                                <h:inputText id="pauser"  value="#{user.primerApellido}" required="true" requiredMessage="Pls enter the Last Name"> </h:inputText>   
+                                
+                                                                  
+                                 <h:outputText class= "output" value="Segundo apellido"/>
+                                <h:inputText id="sauser"  value="#{user.segundoApellido}" required="false" requiredMessage="Pls enter the Second Last Name"> </h:inputText>   
+                                    
+                                                                    
+                                 <h:outputText class= "output" value="Compañía"/>
+                                <h:inputText id="cuser"  value="#{user.company}" required="true" requiredMessage="Pls enter your Company"> </h:inputText>   
+                                    
+                                                                    
+                                <h:outputText class= "output" value="Email"/>
+                                <h:inputText id="euser"  value="#{user.email}" required="true" requiredMessage="Pls enter the Email"> </h:inputText>
+                                
+                                                                    
+                                <h:outputText class= "output" value="Usuario"/>
+                                <h:inputText id="uuser"  value="#{user.usuario}" required="true" requiredMessage="Pls enter the First Name"> </h:inputText>
+                                
+                                                                    
+                                <h:outputText class= "output" value="Contraseña"/>
+                                <h:inputSecret id="pwuser"  value="#{user.password}" required="true" requiredMessage="Pls enter Password"> </h:inputSecret>
+                                
+                                 <h:commandButton class = "cBtn" value="Registrarse" type="submit" action="#{user.registroUser()}"/>
+
+                                
+                           <h:commandLink value="Result Page" action="result"/>
+                       </h:form>
+                    
+                     Your name is      #{user.usuario} <br/>
+                     Your pass is      #{user.password} <br/>
+                        
+                     </f:view>
+                        <div class="pie-form">
+                            <a href="index.html">Cancelar Registro</a>
+                            <a href="index.html">Volver a Página Principal</a>
+                        </div>
+                    </div>
+
+
+
+            </section>    
+           </main>
+
+            <footer class="footer">
+       
+         <section class="footer__copy container">
+            <div class="footer__social">
+                <a href="#" class="footer__icons"><img src="./resources/images/facebook.svg" class="footer__img"></img></a>
+                <a href="#" class="footer__icons"><img src="./resources/images/twitter.svg" class="footer__img"></img></a>
+                <a href="#" class="footer__icons"><img src="./resources/images/youtube.svg" class="footer__img"></img></a>
+            </div>
+
+            <h3 class="footer__copyright">Derechos reservados ; Icaro SAS</h3>
+        </section>
+       </footer>
+
+
+
+        </h:body>
+</html>
